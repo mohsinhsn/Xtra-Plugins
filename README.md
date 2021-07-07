@@ -1,15 +1,15 @@
-# Xtra-Plugins - FridayUB ✨
-> A Repo That Contains Many X-Tra Plugins From FridayDevs And Third Parties.
+# Xtra-Plugins - StylishUB ✨
+> A Repo That Contains Many X-Tra Plugins From StylishUB And Third Parties.
 
 # Example 👊
 
 ### Plugins 🔧
 
 ```python3
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply
 
-@friday_on_cmd(['helloworld'],
+@stylish_on_cmd(['helloworld'],
     cmd_help={
     "help": "This is A TEST",
     "example": "{ch}helloworld"
