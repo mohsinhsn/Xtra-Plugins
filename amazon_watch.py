@@ -1,15 +1,15 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
 import requests
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from bs4 import BeautifulSoup
-from main_startup import Friday
+from main_startup import Stylish
 from main_startup.config_var import Config
 from main_startup.core.decorators import friday_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
@@ -21,7 +21,7 @@ from xtraplugins.dB.amazon_price_tracker_db import (
 )
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["atl", "amazontrack"],
     is_official=False,
     cmd_help={
@@ -55,7 +55,7 @@ async def add_to_db(client, message):
     )
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["rmlt", "rmamazontrack"],
     is_official=False,
     cmd_help={
@@ -90,7 +90,7 @@ async def track_amazon():
         price = price[2:].split(",")
         price = round(float("".join(price)))
         if int(price) > int(ujwal["price"]):
-            await Friday.send_message(
+            await Stylish.send_message(
                 Config.LOG_GRP,
                 f"#Tracker - Price Reduced \nProduct Name : {title} \nCurrent price : {price}",
             )
@@ -99,6 +99,6 @@ async def track_amazon():
             pass
 
 
-scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
+scheduler = AsyncIOScheduler(timezone="Asia/Dhaka")
 scheduler.add_job(track_amazon, trigger="cron", hour=13, minute=35)
 scheduler.start()
