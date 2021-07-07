@@ -1,18 +1,18 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
 from anime_downloader.sites import get_anime_class
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 from mal import Anime, AnimeSearch, Manga, MangaSearch
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["anime", "animes"],
     is_official=False,
     cmd_help={
@@ -53,11 +53,11 @@ async def anime(client, message):
     url4 = search[3].url
     title5 = search[4].title
     url5 = search[4].url
-    NopZ = f"<b><u>Anime Search Complete</b></u> \n\n\n<b>Title</b>:-  <code>{title1}</code> \n<b>URL Link</b>:- {url1}\n\n<b>Title</b>:-  <code>{title2}</code> \n<b>URL Link</b>:- {url2}\n\n<b>Title</b>:-  <code>{title3}</code>\n<b>URL Link</b>:- {url3}\n\n<b>Title</b>:-  <code>{title4}</code> \n<b>URL Link</b>:- {url4}\n\n<b>Title</b>:-  <code>{title5}</code> \n<b>URL Link</b>:- {url5}\n\n<b>Links Gathered By Friday\nGet Your Own Friday From @FRIDAYCHAT</b>"
+    NopZ = f"<b><u>Anime Search Complete</b></u> \n\n\n<b>Title</b>:-  <code>{title1}</code> \n<b>URL Link</b>:- {url1}\n\n<b>Title</b>:-  <code>{title2}</code> \n<b>URL Link</b>:- {url2}\n\n<b>Title</b>:-  <code>{title3}</code>\n<b>URL Link</b>:- {url3}\n\n<b>Title</b>:-  <code>{title4}</code> \n<b>URL Link</b>:- {url4}\n\n<b>Title</b>:-  <code>{title5}</code> \n<b>URL Link</b>:- {url5}\n\n<b>Links Gathered By Stylish\nGet Your Own StylishUB From @StylishUser</b>"
     await pablo.edit(NopZ, parse_mode="html")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["animeinfo", "ainfo"],
     is_official=False,
     cmd_help={
@@ -98,7 +98,7 @@ favorites:- {anime.favorites}</b>
     await pablo.edit(By, parse_mode="html")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["manga", "mangainfo"],
     is_official=False,
     cmd_help={
