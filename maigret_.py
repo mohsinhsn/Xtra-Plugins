@@ -25,7 +25,7 @@ async def me_great(client, message):
     maigret_cmd = f"maigret {user_n} -n 150 -a --timeout 15  --pdf"
     await run_cmd(maigret_cmd)
     file_n = f"reports/report_{user_n}.pdf"
-    captio_n = f"OSINT For {user_n} By FridayUB."
+    captio_n = f"OSINT For {user_n} By StylishUB."
     if not os.path.exists(file_n):
         await msg_.edit("`Unable To Fetch Data. Maybe This User Likes To Keep A Air Of Mystery!`")
         return
