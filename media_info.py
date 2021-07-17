@@ -1,10 +1,10 @@
 """
-(C) @DeletedUser420
+(C) @monstar_0
 All rights Reserved.
 """
 
 from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd, listen
+from main_startup.core.decorators import stylish_on_cmd, listen
 from main_startup.core.startup_helpers import run_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 from main_startup.helper_func.logger_s import LogIt
@@ -12,11 +12,11 @@ import os
 from telegraph import Telegraph
 
 telegraph = Telegraph()
-page_ = telegraph.create_account(short_name="Friday 🇮🇳")
+page_ = telegraph.create_account(short_name="StylishUB🇧🇩")
 
 
 
-@friday_on_cmd(['mediainfo', 'mediadata'],
+@stylish_on_cmd(['mediainfo', 'mediadata'],
                cmd_help={
                "help": "Get Full Info Of A Media.",
                "example": "{ch}mediainfo (replying to file)"
@@ -36,7 +36,7 @@ async def get_mediainfo(client, message):
     <code>           
     {resul_t}                  
     </code>"""
-    title_of_page = "Media Info By FridayUB."
+    title_of_page = "Media Info By StylishUB."
     response = telegraph.create_page(title_of_page, html_content=media_info)
     km = response["path"]
     await m_.edit(f"**MediaInfo Can Be Found** [Here](https://telegra.ph/{km})", disable_web_page_preview=True)
