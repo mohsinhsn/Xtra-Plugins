@@ -1,16 +1,16 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 import feedparser
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from main_startup import Friday
+from main_startup import Stylish
 from xtraplugins.dB.rss_db import (
     add_rss,
     is_get_chat_rss,
@@ -27,7 +27,7 @@ from xtraplugins.dB.rss_db import (
 
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["add_rss"],
     is_official=False,
     cmd_help={
@@ -62,7 +62,7 @@ async def addrss(client, message):
     await add_rss(message.chat.id, lenk, rss_d.entries[0].link)
     await pablo.edit("Successfully Added Link To RSS Watch")
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["test_rss"],
     is_official=False,
     cmd_help={
@@ -94,7 +94,7 @@ async def testrss(client, message):
             await client.send_message(message.chat.id, content)
         await pablo.delete()
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["list_rss"],
     is_official=False,
     cmd_help={
@@ -119,7 +119,7 @@ async def listrss(client, message):
 
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["del_rss"],
     is_official=False,
     cmd_help={
@@ -140,7 +140,7 @@ async def delrss(client, message):
     await del_rss(message.chat.id, lenk)
     await pablo.edit(f"Successfully Removed `{lenk}` From Chat RSS")
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["del_all_rss", "rm_all_rss"],
     is_official=False,
     cmd_help={
@@ -174,7 +174,7 @@ async def check_rss():
              except:
                 pass
              await update_rss(message, link, rss_d.entries[0].link)
-             await Friday.send_message(message, content)
+             await Stylish.send_message(message, content)
              
 
 
