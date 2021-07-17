@@ -52,7 +52,7 @@ Time:- {ar}
 Place:- {place}
 Status:- {status}
 Detailed link:- {urlo}
-<u><b>Ekart Search Completed By Friday.
+<u><b>Ekart Search Completed By StylishUB.
 Get Your Own StylishUB From @StylishUser.</b></u>
 """
     await pablo.edit(caption, parse_mode="HTML")
