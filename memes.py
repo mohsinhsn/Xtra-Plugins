@@ -1,5 +1,5 @@
 import random
-from main_startup.core.decorators import friday_on_cmd, listen
+from main_startup.core.decorators import stylish_on_cmd, listen
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 import asyncio
 
@@ -84,17 +84,15 @@ INSULT_STRINGS = [
     "`I'm sorry I hurt your feelings when I called you stupid. I thought you already knew that.`",
     "`You should try tasting cyanide.`",
     "`You should try sleeping forever.`",
-    "`Sharam kar bsdwale,kitni bkchodi deta.`",
-    "`Chup Madarhox, bilkul chup..`",
-    "`Me zindagi me chunotiyo se jyda inn jese Chutiyo se pareshaan hu.`",
+    "`You are such a brainless idiot.`",
+    "`salar beda, matha kharap naki?..`",
+    "`are sefuda ni?`",
     "`Pick up a gun and shoot yourself.`",
     "`Try bathing with Hydrochloric Acid instead of water.`",
     "`Go Green! Stop inhaling Oxygen.`",
     "`God was searching for you. You should leave to meet him.`",
     "`You should Volunteer for target in an firing range.`",
     "`Try playing catch and throw with RDX its fun.`",
-    "`Jaana chodu chad jake land chaat`",
-    "`Yaar ajab tere nkhare,gazab tera style hain, gand dhone ki tameez nahi, haath main mobile hai`",
     "`People like you are the reason we have middle fingers.`",
     "`When your mom dropped you off at the school, she got a ticket for littering.`",
     "`You’re so ugly that when you cry, the tears roll down the back of your head…just to avoid your face.`",
@@ -112,7 +110,7 @@ def gen_random_slap(user1, user2):
     return wow
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["slap"],
     cmd_help={
         "help": "Slap Replied User",
@@ -131,7 +129,7 @@ async def slap_hard(client, message):
     slap_ = gen_random_slap(message.from_user.mention, message.reply_to_message.from_user.mention)
     await msg_.edit(slap_)
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["insult"],
     cmd_help={
         "help": "Insult A User",
@@ -143,7 +141,7 @@ async def insult_hard(client, message):
     await msg_.edit(insult_)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["lmgtf"],
     cmd_help={
         "help": "Let me Google that for you.",
@@ -156,7 +154,7 @@ async def lmgtfm(client, message):
     await edit_or_reply(message, f"I have Google That For [You]({url}) .")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["type"],
     cmd_help={
         "help": "Type Like You Are Typing IN A Key board",
