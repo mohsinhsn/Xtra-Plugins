@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -10,7 +10,7 @@ import asyncio
 import os
 import logging
 from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import srylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 from pyrogram.errors import FloodWait
 from xtraplugins.dB.fban_db import (
@@ -22,7 +22,7 @@ from xtraplugins.dB.fban_db import (
 )
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["fadd", "addfed"],
     is_official=False,
     cmd_help={
@@ -58,7 +58,7 @@ async def free_fbans(client, message):
     await uj.edit(f"`Added {f_id} To dB!`")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["frm", "rmfed"],
     cmd_help={
         "help": "Remove Feds From dB!",
@@ -82,7 +82,7 @@ async def paid_fbans(client, message):
     await uj.edit(f"`Removed {f_id} From dB!`")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["fban", "fedban"],
     is_official=False,
     cmd_help={
