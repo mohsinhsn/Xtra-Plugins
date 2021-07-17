@@ -1,14 +1,14 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
 from bs4 import BeautifulSoup
 from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.core.startup_helpers import run_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 from hashlib import md5
@@ -28,11 +28,11 @@ async def phone_info(phone_number: int):
           info = await resp.json()
   return info
   
-@friday_on_cmd(
+@stylish_on_cmd(
     ["phone"],
     cmd_help={
         "help": "Get Basic Details About A Phone Number.",
-        "example": "{ch}phone +919581988792",
+        "example": "{ch}phone +8801518680502",
     },
 )
 async def get_info_by_number(client, message):
