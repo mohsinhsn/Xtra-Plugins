@@ -1,17 +1,17 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
 import requests
 import os
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
-from main_startup import Friday
+from main_startup import Srylish
 from main_startup.config_var import Config
 from xtraplugins.dB.mail_tools import (
     add_mail_update_mail,
@@ -25,7 +25,7 @@ from xtraplugins.dB.mail_tools import (
 supported_domains = ["esiix.com", "1secmail.net", "wwjmp.com", "1secmail.org", "1secmail.com"]
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
         ["add_mail"],
         is_official=False,
         cmd_help={
@@ -56,7 +56,7 @@ async def add_mail_to_db(client, message):
     await pablo.edit(f"`Your Mail ID {mail_id} successfully added to dB`")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
         ["list_mails"],
         is_official=False,
         cmd_help={
@@ -71,7 +71,7 @@ async def list_mails(client, message):
         cap +=f"`{x}` \n"
     await pablo.edit(cap)
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["check_mail"],
     is_official=False,
     cmd_help={
@@ -137,7 +137,7 @@ async def check_mail(client, message):
     await pablo.delete()
         
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["my_mail"],
     is_official=False,
     cmd_help={
@@ -154,7 +154,7 @@ async def my_mail(client, message):
     await pablo.edit(f"Hey Boss, Your Mail ID is : `{email}`")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["all_mails"],
     is_official=False,
     cmd_help={
@@ -222,7 +222,7 @@ async def all_mails(client, message):
         await pablo.delete()
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["delete_mail"],
     is_official=False,
     cmd_help={
@@ -283,19 +283,19 @@ async def track_mails():
         if len(last) > 1024:
             file_names = "email.text"
             open(file_names, "w").write(last)
-            await Friday.send_document(Config.LOG_GRP, file_names, caption = "Your Mail")
+            await Stylish.send_document(Config.LOG_GRP, file_names, caption = "Your Mail")
             os.remove(file_names)
         else:
-            await Friday.send_message(
+            await Stylish.send_message(
                 Config.LOG_GRP, last)
     else:
         if len(last) > 1024:
-            await Friday.send_document(Config.LOG_GRP, fl_name, caption = "Your Mail Attachment")
-            await Friday.send_document(Config.LOG_GRP, file_names, caption = "Your Mail")
+            await Stylish.send_document(Config.LOG_GRP, fl_name, caption = "Your Mail Attachment")
+            await Stylish.send_document(Config.LOG_GRP, file_names, caption = "Your Mail")
             os.remove(fl_name)
             os.remove(file_names)
         else:
-            await Friday.send_document(Config.LOG_GRP, fl_name, caption = last)
+            await Stylish.send_document(Config.LOG_GRP, fl_name, caption = last)
             os.remove(fl_name)
 
 scheduler = AsyncIOScheduler()
