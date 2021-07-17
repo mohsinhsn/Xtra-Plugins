@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -14,7 +14,7 @@ from PIL import Image
 import logging
 import pathlib
 from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.core.startup_helpers import run_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 
@@ -73,7 +73,7 @@ async def create_s_collage(file_path, filename, width, stark_h):
 
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["collage"],
     cmd_help={
         "help": "Create Collage From All Images in A Chat.",
@@ -122,7 +122,7 @@ async def wow_collage(client, message):
         await owo.edit("`How Am I Supposed To Make Collage With One Image?`")
         return
     await owo.edit("`Creating Collage....`")
-    imgpath = await create_s_collage(file_path=file_path, filename="Collage_by_FridayUB.jpg", width=width, stark_h=stark_h)
+    imgpath = await create_s_collage(file_path=file_path, filename="Collage_by_StylishUB.jpg", width=width, stark_h=stark_h)
     if not imgpath:
         if os.path.exists(file_path):
             shutil.rmtree(file_path)
