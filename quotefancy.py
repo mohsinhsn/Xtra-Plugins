@@ -1,11 +1,17 @@
-# (C) Copyright - <New-dev0@Github> & <Anonymous_Machinee@Telegram>
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
+#
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
+#
+# All rights reserved.
 
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply
 from quotefancy import get_quote
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ['quotefancy'],
     is_official=False,
     cmd_help={
