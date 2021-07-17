@@ -11,7 +11,7 @@ import urllib.request
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 from bs4 import BeautifulSoup
 from pyrogram import filters
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 
 
 @stylish_on_cmd(
