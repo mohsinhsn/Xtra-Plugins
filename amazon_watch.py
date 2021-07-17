@@ -11,7 +11,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from bs4 import BeautifulSoup
 from main_startup import Stylish
 from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 from xtraplugins.dB.amazon_price_tracker_db import (
     add_amazon_tracker,
