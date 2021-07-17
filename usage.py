@@ -13,7 +13,7 @@ import time
 from asyncio import sleep
 from pyrogram.types import ChatPermissions
 import os
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import (
     edit_or_reply,
     edit_or_send_as_file,
@@ -37,7 +37,7 @@ def _check_heroku(func):
             await func(client, message, heroku_client)
     return heroku_cli
     
-@friday_on_cmd(
+@stylish_on_cmd(
     ['usage'],
     cmd_help={
         "help": "Check Your App Usage!",
@@ -83,10 +83,10 @@ async def gib_usage(client, message, hc):
   app_name = Config.HEROKU_APP_NAME or "Not Specified."
   return await msg_.edit(
         "<b><u>Dyno Usage Data</b></u>:\n\n"
-        f"<b>✗ APP NAME :</b> <code>{app_name}</code> \n"
-        f"<b>✗ Usage in Hours And Minutes :</b> <code>{AppHours}h {AppMinutes}m</code> \n"
-        f"<b>✗ Usage Percentage :</b> <code>[{AppPercentage} %]</code> \n\n\n"
-        "<b>✗ Dyno Remaining This Months 📆: </b>\n"
+        f"<b> APP NAME :</b> <code>{app_name}</code> \n"
+        f"<b> Usage in Hours And Minutes :</b> <code>{AppHours}h {AppMinutes}m</code> \n"
+        f"<b> Usage Percentage :</b> <code>[{AppPercentage} %]</code> \n\n\n"
+        "<b> Dyno Remaining This Months 📆: </b>\n"
         f"<code>{hours}h {minutes}m</code> \n"
-        f"<b>✗ Percentage :</b> <code>[{percentage}%]</code>",
+        f"<b> Percentage :</b> <code>[{percentage}%]</code>",
     )
