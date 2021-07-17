@@ -1,15 +1,15 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
 import os
 import time
 import requests
-from main_startup.core.decorators import friday_on_cmd, Config
+from main_startup.core.decorators import stylish_on_cmd, Config
 from main_startup.core.startup_helpers import run_cmd
 from main_startup.helper_func.basic_helpers import (
     edit_or_reply,
@@ -19,7 +19,7 @@ from main_startup.helper_func.basic_helpers import (
 )
 vak = Config.V_T_KEY
 
-@friday_on_cmd(['vt', 'scan'],
+@stylish_on_cmd(['vt', 'scan'],
                cmd_help={
                  "help": "Scan A File For Viruses. Needs Api Key From https://virustotal.com",
                  "example": "{ch}vt (Replying to File / Document)"
