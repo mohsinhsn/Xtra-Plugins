@@ -1,11 +1,11 @@
 import requests
 import bs4
 
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["xvideo"],
     cmd_help={
         "help": "Get direct Downloadable",
@@ -34,7 +34,7 @@ async def xvid(client, message):
 
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["xsearch"],
     cmd_help={
         "help": "Xvideo Searcher",
