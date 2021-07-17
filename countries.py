@@ -1,12 +1,12 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 import flag
 import html
@@ -14,7 +14,7 @@ from countryinfo import CountryInfo
 
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["country", "Countries"],
     is_official=False,
     cmd_help={
@@ -106,6 +106,6 @@ Time Zones:- {tom}
 Top Level Domain:- {lanester}
 wikipedia:- {wiki}</b>
 <u><b>
-Information Gathered By FridayUB.
+Information Gathered By StylishUB.
 """
     await msg_.edit(caption, parse_mode="html")
