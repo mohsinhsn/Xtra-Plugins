@@ -1,17 +1,17 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
 import requests
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["ekart"],
     is_official=False,
     cmd_help={
@@ -53,6 +53,6 @@ Place:- {place}
 Status:- {status}
 Detailed link:- {urlo}
 <u><b>Ekart Search Completed By Friday.
-Get Your Own Friday From @FRIDAYCHAT.</b></u>
+Get Your Own StylishUB From @StylishUser.</b></u>
 """
     await pablo.edit(caption, parse_mode="HTML")
