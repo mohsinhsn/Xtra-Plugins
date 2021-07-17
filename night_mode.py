@@ -107,11 +107,11 @@ async def job_open():
             logging.info(str(e))
             ido = warner.get("chat_id")
             try:
-                await Friday.send_message(Config.LOG_GRP, f"[NIGHT MODE]\n\nFailed To Open The Group {ido}.\nError : {e}")
+                await Stylish.send_message(Config.LOG_GRP, f"[NIGHT MODE]\n\nFailed To Open The Group {ido}.\nError : {e}")
             except:
                 pass
             
 
-scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
+scheduler = AsyncIOScheduler(timezone="Asia/Dhaka")
 scheduler.add_job(job_open, trigger="cron", hour=6, minute=10)
 scheduler.start()
