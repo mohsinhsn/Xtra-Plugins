@@ -19,7 +19,7 @@ from countryinfo import CountryInfo
     is_official=False,
     cmd_help={
         "help": "Get Information About Any Country",
-        "example": "{ch}country India",
+        "example": "{ch}country Bangladesh",
     },
 )
 async def country_(client, message):
