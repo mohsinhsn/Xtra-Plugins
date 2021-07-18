@@ -1,9 +1,10 @@
 from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
+imoprt stylish_generator
 
 @stylish_on_cmd(
     pattern="fmusical(?:\s|$)([\s\S]*)",
-    command=("fmusical", plugin_category),
+    command=("fmusical"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": [
@@ -34,7 +35,7 @@ async def stylish_generator(event):
 
 @stylish_on_cmd(
     pattern="ancient(?:\s|$)([\s\S]*)",
-    command=("ancient", plugin_category),
+    command=("ancient"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": [
@@ -65,7 +66,7 @@ async def stylish_generator(event):
 
 @stylish_on_cmd(
     pattern="vapor(?:\s|$)([\s\S]*)",
-    command=("vapor", plugin_category),
+    command=("vapor"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}vapor <text>", "{tr}vapor reply this command to text message"],
@@ -98,7 +99,7 @@ async def vapor(event):
 
 @stylish_on_cmd(
     pattern="smallcaps(?:\s|$)([\s\S]*)",
-    command=("smallcaps", plugin_category),
+    command=("smallcaps"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": [
@@ -129,7 +130,7 @@ async def stylish_generator(event):
 
 @stylish_on_cmd(
     pattern="blackbf(?:\s|$)([\s\S]*)",
-    command=("blackbf", plugin_category),
+    command=("blackbf"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": [
@@ -160,7 +161,7 @@ async def stylish_generator(event):
 
 @stylish_on_cmd(
     pattern="bubbles(?:\s|$)([\s\S]*)",
-    command=("bubbles", plugin_category),
+    command=("bubbles"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": [
@@ -191,7 +192,7 @@ async def stylish_generator(event):
 
 @stylish_on_cmd(
     pattern="tanf(?:\s|$)([\s\S]*)",
-    command=("tanf", plugin_category),
+    command=("tanf"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}tanf <text>", "{tr}tanf reply this command to text message"],
@@ -219,7 +220,7 @@ async def stylish_generator(event):
 
 @stylish_on_cmd(
     pattern="boxf(?:\s|$)([\s\S]*)",
-    command=("boxf", plugin_category),
+    command=("boxf"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}boxf <text>", "{tr}boxf reply this command to text message"],
@@ -247,7 +248,7 @@ async def stylish_generator(event):
 
 @stylish_on_cmd(
     pattern="smothtext(?:\s|$)([\s\S]*)",
-    command=("smothtext", plugin_category),
+    command=("smothtext"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": [
@@ -278,7 +279,7 @@ async def stylish_generator(event):
 
 @stylish_on_cmd(
     pattern="egyptf(?:\s|$)([\s\S]*)",
-    command=("egyptf", plugin_category),
+    command=("egyptf"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}egyptf <text>", "{tr}egyptf reply this command to text message"],
@@ -306,7 +307,7 @@ async def stylish_generator(event):
 
 @stylish_on_cmd(
     pattern="maref(?:\s|$)([\s\S]*)",
-    command=("maref", plugin_category),
+    command=("maref"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}maref <text>", "{tr}maref reply this command to text message"],
@@ -334,7 +335,7 @@ async def stylish_generator(event):
 
 @stylish_on_cmd(
     pattern="handcf(?:\s|$)([\s\S]*)",
-    command=("handcf", plugin_category),
+    command=("handcf"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}handcf <text>", "{tr}handcf reply this command to text message"],
@@ -362,7 +363,7 @@ async def stylish_generator(event):
 
 @stylish_on_cmd(
     pattern="doublef(?:\s|$)([\s\S]*)",
-    command=("doublef", plugin_category),
+    command=("doublef"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": [
@@ -393,7 +394,7 @@ async def stylish_generator(event):
 
 @stylish_on_cmd(
     pattern="mock(?:\s|$)([\s\S]*)",
-    command=("mock", plugin_category),
+    command=("mock"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}mock <text>", "{tr}mock reply this command to text message"],
@@ -425,7 +426,7 @@ async def spongemocktext(mock):
 
 @stylish_on_cmd(
     pattern="ghostf(?:\s|$)([\s\S]*)",
-    command=("ghostf", plugin_category),
+    command=("ghostf"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}ghostf <text>", "{tr}ghostf reply this command to text message"],
@@ -453,7 +454,7 @@ async def stylish_generator(event):
 
 @stylish_on_cmd(
     pattern="handsf(?:\s|$)([\s\S]*)",
-    command=("handsf", plugin_category),
+    command=("handsf"),
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}handsf <text>", "{tr}handsf reply this command to text message"],
