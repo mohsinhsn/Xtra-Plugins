@@ -1,5 +1,5 @@
-import telethon 
-from telethon import functions
+import pyrogram 
+from pyrogram import functions
 
 @stylish.on(stylish_on_cmd(pattern="scrap ?(.*)"))
 async def sed(event):
