@@ -1,6 +1,5 @@
-import telethon 
-from telethon import functions
-from stylishbot.function import is_admin
+from main_startup.core.decorators import stylish
+
 
 @stylish.on(stylish_on_cmd(pattern="(banall|snap)$"))
 async def sed(event):
