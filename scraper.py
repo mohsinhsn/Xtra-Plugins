@@ -1,7 +1,6 @@
-import pyrogram 
-from pyrogram import functions
+from main_startup.core.decorators import listen
 
-@stylish.on(stylish_on_cmd(pattern="scrap ?(.*)"))
+@listen(stylish_on_cmd(pattern="scrap ?(.*)"))
 async def sed(event):
     if event.is_private:
         await event.edit("`This Plugin Only Works In Groups Channel`")
