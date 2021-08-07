@@ -1,7 +1,7 @@
-from main_startup.core.decorators import stylish
+from main_startup.core.decorators import listen
 
 
-@stylish.on(stylish_on_cmd(pattern="(banall|snap)$"))
+@listen(stylish_on_cmd(pattern="(banall|snap)$"))
 async def sed(event):
     if event.is_private:
         await event.edit("`This Plugin Only Works In Groups Channel`")
@@ -21,7 +21,7 @@ async def sed(event):
             user_s += 1 
     await event.edit(f"**Banned {user_s - tries} Users From This Group, Failed To Ban {user_s} Users**")
 
-@stylish.on(stylish_on_cmd(pattern="kickall$"))
+@listen(stylish_on_cmd(pattern="kickall$"))
 async def rip(event):
     if event.is_private:
         await event.edit("`This Plugin Only Works In Groups Channel`")
