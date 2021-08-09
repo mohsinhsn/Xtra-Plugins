@@ -2,8 +2,8 @@ from main_startup.core.decorators import stylish_on_cmd, Config, listen
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 from pyrogram import filters
 
-@listen(stylish_on_cmd(pattern="scrap ?(.*)"))
-async def sed(event):
+@listen(filters.mentioned & ~filters.me)
+async def mentioned_(event):
     if event.is_private:
         await event.edit("`This Plugin Only Works In Groups Channel`")
         return
