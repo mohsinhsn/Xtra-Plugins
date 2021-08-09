@@ -3,7 +3,7 @@ from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 from pyrogram import filters
 
 @listen(filters.mentioned & ~filters.me)
-async def mentioned_(event):
+async def sed(event):
     if event.is_private:
         await event.edit("`This Plugin Only Works In Groups Channel`")
         return
